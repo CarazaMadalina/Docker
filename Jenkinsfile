@@ -1,8 +1,8 @@
 pipeline {
-    agent any
-    
-    tools {
-      maven "mvn3.8.4"
+    agent {
+        docker {
+            image 'maven:3.8.1-adoptopenjdk-11'
+        }
     }
 
     stages {
@@ -25,7 +25,6 @@ pipeline {
            sh 'mvn test -Dtest="DockerTest#${TestMethod}"'
        }
     }
-
 
     stage('Clean Workspace') {
       steps {

@@ -19,7 +19,7 @@ pipeline {
 
       stage('Test stage') {
         when {
-           expression { ${BRANCH} == "master" }
+           expression { BRANCH == "master" }
         }
        agent {
         label 'built-in'

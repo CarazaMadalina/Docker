@@ -8,7 +8,7 @@ pipeline {
     stages {
       stage('Build stage') {
         steps {
-            sh 'echo Building ${BRANCH} branch'
+            sh 'echo ${Test method}'
             sh 'mvn clean install -DskipTests'
         }
       }
@@ -22,7 +22,7 @@ pipeline {
        }
 
        steps {
-        sh 'mvn test'
+           sh 'mvn test -DDockerTest#${Test method}'
        }
     }
 

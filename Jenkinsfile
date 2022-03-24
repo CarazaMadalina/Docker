@@ -1,8 +1,4 @@
 pipeline {
-    parameters {
-      choice choices: ['master', 'madalina'], description: 'which branch to checkout?', name: 'BRANCH'
-    }
-
     agent any
     
     tools {

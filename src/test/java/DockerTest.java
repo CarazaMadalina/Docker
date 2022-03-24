@@ -9,7 +9,7 @@ public class DockerTest {
     @Test
     public void firstTest() {
         long currentTime = System.currentTimeMillis();
-        assertTrue("the time is not correct", currentTime > 0);
+        assertTrue("the time is not correct" , currentTime > 0);
     }
 
     @Test

@@ -22,7 +22,7 @@ pipeline {
        }
 
        steps {
-           sh 'mvn test -DDockerTest#${TestMethod}'
+           sh 'mvn test -Dtest="DockerTest#${TestMethod}"'
        }
     }
 
